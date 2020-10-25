@@ -6,15 +6,15 @@
 ! fit consistent with an LAI timeseries.
 ! -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ! POOLS:  1.labile                                                              PARAMETERS:  1.Decomposition rate
-!         2.foliar 																			 2.Fraction of GPP to respired
+!         2.foliar 					                                     2.Fraction of GPP to respired
 !         3.root                                                                             3.Maximum developmental rate: DS (0->1) 
 !         4.stem                                                                             4.Maximum developmental rate: DS (1->2)
 !         5.litter                                                                           5.Turnover rate of foliage pool
-!		  6.SOM                  													         6.Turnover rate of stem pool
-!		  7.autotrophic respiration 													     7.Maximum rate of foliar turnover due to self-shading
+!	  6.SOM                  					                     6.Turnover rate of stem pool
+!	  7.autotrophic respiration 					                     7.Maximum rate of foliar turnover due to self-shading
 !         8.storage                                                                          8.Effective vernalisation days when plants are 50% vernalised	
 ! ---------------------------------------------------------------------------                9.Mineralisation rate of soil organic matter (SOM)
-! FLUXES: 1.GPP (gC.m-2.day-1)																10.Mineralisation rate of litter
+! FLUXES: 1.GPP (gC.m-2.day-1)								    10.Mineralisation rate of litter
 !         2.temprate (i.e. temperature modified rate of metabolic activity)                 11.Photosynthetic nitrogen use efficiency
 !         3.autotrophic respiration (gC.m-2.day-1)                                          12.Sowing day
 !         4.leaf production rate (gC.m-2.day-1)                                             13.Respiratory cost of labile transfer
@@ -22,25 +22,25 @@
 !         6.root production (gC.m-2.day-1)                                                  15.Harvest day
 !         7.stem production (gC.m-2.day-1)                                                  16.Plough day
 !         8.labile consumption (gC.m-2.day-1)                                               17.Leaf C per area (LCA)
-!         9.allocation to storage organ (gC.m-2.day-1)										18.Initial labile pool
-!        10.total leaf litter production (gC.m-2.day-1)									    19.Initial foliar pool
-!        11.stem litter production (gC.m-2.day-1)  									        20.Initial root pool
-!        12.root litter production (gC.m-2.day-1)											21.Initial stem pool
-!        13.respiration heterotrophic litter (gC.m-2.day-1)								    22.Initial litter pool
-!        14.respiration heterotrophic SOM (gC.m-2.day-1)									23.Initial SOM pool
-!        15.litter to SOM rate (gC.m-2.day-1)											    24.autotrophic pool
-!        16.allocation to autotrophic pool (gC.m-2.day-1)									25.Initial storage pool  																					 
+!         9.allocation to storage organ (gC.m-2.day-1)					    18.Initial labile pool
+!        10.total leaf litter production (gC.m-2.day-1)					    19.Initial foliar pool
+!        11.stem litter production (gC.m-2.day-1)  					    20.Initial root pool
+!        12.root litter production (gC.m-2.day-1)				            21.Initial stem pool
+!        13.respiration heterotrophic litter (gC.m-2.day-1)				    22.Initial litter pool
+!        14.respiration heterotrophic SOM (gC.m-2.day-1)				    23.Initial SOM pool
+!        15.litter to SOM rate (gC.m-2.day-1)						    24.autotrophic pool
+!        16.allocation to autotrophic pool (gC.m-2.day-1)				    25.Initial storage pool  																					 
 !                                                                                           26.Minimum temperature for development
-! 																							27.Maximum temperature for development
+! 											    27.Maximum temperature for development
 !                                                                                           28.Optimum temperature for development
-!																							29.Minimum temperature for vernalisation
-!																						    30.Maximum temperature for vernalisation															
-!																						    31.Optimum temperature for vernalisation
-!																							32.Critical photoperiod for development
-!																							33.Photoperiod sensitivity
-!																							34.turnover rate of labile 
-!																							35.Slope of nitrogen dilution 
-!																							36.Intercept of nitrogen dilution
+!			         							    29.Minimum temperature for vernalisation
+!											    30.Maximum temperature for vernalisation															
+!											    31.Optimum temperature for vernalisation
+!											    32.Critical photoperiod for development
+!											    33.Photoperiod sensitivity
+!											    34.turnover rate of labile 
+!											    35.Slope of nitrogen dilution 
+!											    36.Intercept of nitrogen dilution
 ! -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 module CARBON_MODEL_CROP_MOD
@@ -205,7 +205,7 @@ contains
     integer, intent(in) :: start    & 
                           ,finish   &
                           ,nopars   & ! number of paremeters in vector
-						  ,nomet    & ! number of meteorological fields
+			  ,nomet    & ! number of meteorological fields
                           ,nofluxes & ! number of model fluxes
                           ,nopools  & ! number of model pools
                           ,nodays     ! number of days in simulation
@@ -309,8 +309,8 @@ contains
     PHSC                              = pars(33) ! photoperiod sensitivity
     turnover_rate_labile              = pars(34) ! turnover rate labile C
     turnover_rate_resp_auto           = pars(35) ! turnover rate of autotrophic carbon for respiration
-    slope_n	                      	  = pars(36) ! Estimated slope for N dilution function
-    intercept_n 	                  = pars(37) ! LNA estimated intecept for N dilution function
+    slope_n	                      = pars(36) ! Estimated slope for N dilution function
+    intercept_n 	              = pars(37) ! LNA estimated intecept for N dilution function
 
 
     if (start == 1) then
@@ -374,17 +374,17 @@ contains
       gpppars(2)   = met(3,n)                          ! max T
       gpppars(3)   = met(2,n)                          ! min T
 
-	  ! ------------------------------------------------------
-	  ! CALCULATION OF LNA (gpppars(4)) 
-	  ! The calculation of LNA (used in ACM) is based on the destructively sampled winter wheat C and N data, which was acquired during key growth stages in accordance with
-	  ! the UK AHDB winter wheat growth guide (https: //projectblue.blob.core.windows.net/media/Default/Imported%20Publication%20Docs/Wheat%20growth%20guide.pdf): from early tillering (GS 20) to 
-	  ! post-anthesis/reprodictive (GS 75).
+      ! ------------------------------------------------------
+      ! CALCULATION OF LNA (gpppars(4)) 
+      ! The calculation of LNA (used in ACM) is based on the destructively sampled winter wheat C and N data, which was acquired during key growth stages in accordance with
+      ! the UK AHDB winter wheat growth guide (https://projectblue.blob.core.windows.net/media/Default/Imported%20Publication%20Docs/Wheat%20growth%20guide.pdf): 
+      ! from early tillering (GS 20) to post-anthesis/reprodictive (GS 75).
 	  
-	  if (DS .lt. 0.15) then                           ! DS < 0.15 corresponds to the growth stage at beginning of the UK reccommended period of      
+      if (DS .lt. 0.15) then                           ! DS < 0.15 corresponds to the growth stage at beginning of the UK reccommended period of      
          gpppars(4) = intercept_n                      ! N fertiliser application for winter wheat (Zodocks growth stage 20) - the early tillering stage (typically mid-march to April)
       else if (DS .ge. 0.15) then                      
          gpppars(4) = (slope_n*POOLS(n,2))+intercept_n ! NOTE: The slope_n parameter can be included in the MDF optimisation. The value for this parameter has also been observed to be 
-      end if                                           !       similar across different N application rates and so a mean value of -0.02448 could also be used.
+      end if                                           ! similar across different N application rates and so a mean value of -0.02448 could also be used.
 
       if (DS .gt. 1.15) then                           ! Set LNA to 0.5 after anthesis (Zodocks growth stage 75)  
          gpppars(4) = 0.5
@@ -524,7 +524,7 @@ contains
     ! load driver values 
     maxt = drivers(2)
     mint = drivers(3)
-    nit = drivers(4)    ! Linked to N dilution function
+    nit = drivers(4)    
     co2 = drivers(5)
     radiation = drivers(8)
     lat = drivers(7)
