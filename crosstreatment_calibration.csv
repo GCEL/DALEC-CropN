@@ -1,0 +1,37 @@
+PAR_NUM,PAR_DESCRIPTION,PAR_MIN,PAR_MAX
+1,Decomposition rate,1.94E-05,9.99E-03
+2,Fraction of GPP to respired,4.25E-01,5.50E-01
+3,Maximum developmental rate: DS (0->1) ,1.40E-02,6.00E-01
+4,Maximum developmental rate: DS (1->2),1.11E-02,6.00E-01
+5,Turnover rate of foliage pool,1.01E-04,9.96E-04
+6,Turnover rate of stem pool,1.09E-04,1.00E-02
+7,Maximum rate of foliar turnover due to self-shading,6.29E-04,1.50E-02
+8,Effective vernalisation days when plants are 50% vernalised ,1.00E+01,1.90E+01
+9,Mineralisation rate of soil organic matter (SOM),3.10E-06,9.99E-04
+10,Mineralisation rate of litter,1.51E-05,1.50E-02
+11,Photosynthetic nitrogen use efficiency,4.05E+00,6.00E+00
+12,Sowing day,2.74E+02,2.74E+02
+13,Respiratory cost of labile transfer,5.03E-02,4.85E-01
+14,Phenological heat units required for emergence,8.01E+01,1.80E+02
+15,Harvest day,2.50E+02,2.50E+02
+16,Plough day,3.20E+02,3.20E+02
+17,Leaf C per area (LCA),3.00E+01,3.90E+01
+18,Initial labile pool,1.25E-01,9.97E+00
+19,Initial foliar pool,5.00E-01,9.99E-01
+20,Initial root pool,1.08E-01,2.00E+00
+21,Initial stem pool,1.01E-01,9.99E-01
+22,Initial litter pool,4.08E-01,4.99E+02
+23,Initial SOM pool,1.04E+03,9.99E+03
+24,autotrophic pool,1.11E-01,4.99E+00
+25,allocation to autotrophic pool (gC.m-2.day-1) 25.Initial storage pool ,2.12E-04,9.99E-02
+26,Minimum temperature for development,-9.89E-01,1.00E+01
+27,Maximum temperature for development,2.00E+01,4.00E+01
+28,Optimum temperature for development,5.06E+00,2.60E+01
+29,Minimum temperature for vernalisation,-7.47E+00,2.48E+00
+30,Maximum temperature for vernalisation ,1.30E+01,2.20E+01
+31,Optimum temperature for vernalisation,2.02E+00,9.00E+00
+32,Critical photoperiod for development,3.02E+00,1.30E+01
+33,Photoperiod sensitivity,1.06E-02,4.00E-01
+34,Turnover rate of labile ,1.01E-02,5.99E-02
+35,Slope of nitrogen dilution ,1.03E-02,6.00E-01
+36,Intercept of nitrogen dilution,-1.10E-02,-7.00E-03
