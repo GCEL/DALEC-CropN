@@ -6,3 +6,7 @@ Code used for inferring crop leaf nitrogen per area (LNA) based on the calibrati
 ![TRIALS_Github](https://user-images.githubusercontent.com/43847496/97121237-9dd99800-1714-11eb-8e95-5672db870db2.png)
 
 ![N_fit_Github](https://user-images.githubusercontent.com/43847496/97122637-3d038d00-171f-11eb-96b7-2966736ecfe4.png)
+
+A DALEC-CropN parameter file (see: crosstreatment_calibration.csv) that was generated based on a calibration of key parameters determining C availability and phenology (see table below) across a gradient of N fertiliser treatment rates for two winter wheat seasons under the constraints of LAI observations.
+
+![calibrated_parameters](https://user-images.githubusercontent.com/43847496/97156962-5a604780-176f-11eb-8ada-18ce864c9ce0.png)
