@@ -5,4 +5,4 @@ Code used for inferring crop leaf nitrogen per area (LNA) based on the calibrati
 
 ![TRIALS_Github](https://user-images.githubusercontent.com/43847496/97121237-9dd99800-1714-11eb-8e95-5672db870db2.png)
 
-![N_fit_Github](https://user-images.githubusercontent.com/43847496/97121388-bdbd8b80-1715-11eb-9fd9-b6ebfeb1e580.png)
+![N_fit_Github](https://user-images.githubusercontent.com/43847496/97122637-3d038d00-171f-11eb-96b7-2966736ecfe4.png)
